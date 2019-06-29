@@ -1,7 +1,7 @@
 package bigdata.service;
 
-import bigdata.Dao.FollowDao;
-import bigdata.Dao.allFollowDao;
+import bigdata.dao.FollowDao;
+import bigdata.dao.AllFollowDao;
 import bigdata.domain.Follow;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ public class FollowService {
     @Autowired
     private FollowDao followDao;
     @Autowired
-    private allFollowDao allFollowDao;
+    private AllFollowDao allFollowDao;
 
     public List<Follow> getData(){
         List<Follow> datas = followDao.getDatas();

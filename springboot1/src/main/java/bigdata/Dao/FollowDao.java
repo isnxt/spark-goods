@@ -1,4 +1,4 @@
-package bigdata.Dao;
+package bigdata.dao;
 
 import bigdata.domain.Follow;
 import bigdata.utils.JDBCUtils;

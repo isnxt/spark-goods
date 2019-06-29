@@ -1,6 +1,6 @@
-package bigdata.Dao;
+package bigdata.dao;
 
-import bigdata.domain.itemR;
+import bigdata.domain.ItemR;
 import bigdata.utils.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
@@ -10,13 +10,13 @@ import java.util.List;
 
 
 @Component
-public class itemDao {
-    public List<itemR> getDatas(){
+public class ItemDao {
+    public List<ItemR> getDatas(){
         try{
             String sql = "select itemID,userID,scores from itemrecommend";
             System.out.println("sql: "+sql);
             QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
-            List<itemR> beanList = runner.query(sql,new BeanListHandler<itemR>(itemR.class));
+            List<ItemR> beanList = runner.query(sql,new BeanListHandler<ItemR>(ItemR.class));
              /*for(int i=0;i<beanList.size();i++){
                 System.out.println(beanList.get(i).toString());
             }*/

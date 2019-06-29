@@ -1,10 +1,7 @@
 package bigdata.service;
 
-import bigdata.Dao.FollowDao;
-import bigdata.Dao.allFollowDao;
-import bigdata.Dao.windowFollowDao;
-import bigdata.domain.Follow;
-import bigdata.domain.windowFollow;
+import bigdata.dao.WindowFollowDao;
+import bigdata.domain.WindowFollow;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +11,14 @@ import java.util.*;
 
 
 @Service
-public class windowFollowService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(windowFollowService.class);
+public class WindowFollowService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(WindowFollowService.class);
 
     @Autowired
-    private windowFollowDao windowFollowDao;
+    private WindowFollowDao windowFollowDao;
 
-    public List<windowFollow> getData(){
-        List<windowFollow> datas = windowFollowDao.getDatas();
+    public List<WindowFollow> getData(){
+        List<WindowFollow> datas = windowFollowDao.getDatas();
         return datas;
     }
 }

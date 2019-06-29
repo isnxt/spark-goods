@@ -1,4 +1,4 @@
-package bigdata.Dao;
+package bigdata.dao;
 
 import bigdata.domain.Follow;
 import bigdata.utils.JDBCUtils;
@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @Component
-public class allFollowDao {
+public class AllFollowDao {
     public List<Follow> getDatas(){
         try{
             String sql = "select * from followdata order by followValue desc";

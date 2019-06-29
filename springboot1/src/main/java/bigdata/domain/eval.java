@@ -1,6 +1,6 @@
 package bigdata.domain;
 
-public class eval {
+public class Eval {
     private int rank;
     private int iterations;
     private double lambda;
@@ -32,7 +32,7 @@ public class eval {
 
     @Override
     public String toString() {
-        return "eval:"+rank+" "+iterations+" "+lambda+" "+rmse+" "+time;
+        return "Eval:"+rank+" "+iterations+" "+lambda+" "+rmse+" "+time;
     }
 
 }

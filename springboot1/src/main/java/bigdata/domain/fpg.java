@@ -1,6 +1,6 @@
 package bigdata.domain;
 
-public class fpg {
+public class Fpg {
     private String antecedent;
     private String consequent;
     private double confidence;
@@ -28,6 +28,6 @@ public class fpg {
     }
     @Override
     public String toString() {
-        return "fpg:"+antecedent+" "+consequent+" "+confidence;
+        return "Fpg:"+antecedent+" "+consequent+" "+confidence;
     }
 }

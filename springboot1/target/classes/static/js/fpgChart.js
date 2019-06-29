@@ -1,4 +1,4 @@
-var fpgchart = {
+var fpgChart = {
     url:{
         getData:"/getFpgData"
     },
@@ -8,15 +8,15 @@ var fpgchart = {
             function callback(data) {
                 if(data.success){
                     //alert("start");
-                    fpgchart.fn.drawEvalChart1(data);
-                    fpgchart.fn.drawEvalChart2(data);
+                    fpgChart.fn.drawEvalChart1(data);
+                    fpgChart.fn.drawEvalChart2(data);
                     //alert("end");
                 }else{
                     alert("错误："+data.msg)
                 }
             }
             var params={};
-            fpgchart.fn.ajax(fpgchart.url.getData,params,callback)
+            fpgChart.fn.ajax(fpgChart.url.getData,params,callback)
         },
         drawEvalChart1:function(data){
 

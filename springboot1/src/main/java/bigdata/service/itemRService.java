@@ -1,8 +1,8 @@
 package bigdata.service;
 
 
-import bigdata.Dao.itemDao;
-import bigdata.domain.itemR;
+import bigdata.dao.ItemDao;
+import bigdata.domain.ItemR;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,14 +12,14 @@ import java.util.*;
 
 
 @Service
-public class itemRService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(itemRService.class);
+public class ItemRService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ItemRService.class);
 
     @Autowired
-    private itemDao itemDao;
+    private ItemDao itemDao;
 
-    public List<itemR> getData(){
-        List<itemR> datas = itemDao.getDatas();
+    public List<ItemR> getData(){
+        List<ItemR> datas = itemDao.getDatas();
         return datas;
     }
 }

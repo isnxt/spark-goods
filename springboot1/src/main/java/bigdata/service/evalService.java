@@ -1,7 +1,7 @@
 package bigdata.service;
 
-import bigdata.Dao.evalDao;
-import bigdata.domain.eval;
+import bigdata.dao.EvalDao;
+import bigdata.domain.Eval;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,13 +11,13 @@ import java.util.*;
 
 
 @Service
-public class evalService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(evalService.class);
+public class EvalService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(EvalService.class);
 
     @Autowired
-    private evalDao evalDao;
-    public List<eval> getData(){
-        List<eval> datas = evalDao.getDatas();
+    private EvalDao evalDao;
+    public List<Eval> getData(){
+        List<Eval> datas = evalDao.getDatas();
         return datas;
     }
 }

@@ -2,7 +2,7 @@ package bigdata.domain;
 
 import java.io.Serializable;
 
-public class windowFollow implements Serializable{
+public class WindowFollow implements Serializable{
     private String itemID;
     private double followValue;
 
@@ -17,7 +17,7 @@ public class windowFollow implements Serializable{
 
     @Override
     public String toString() {
-        return "windowFollow{" +
+        return "WindowFollow{" +
                 "itemID=" + itemID +
                 ", followValue=" + followValue +
                 '}';

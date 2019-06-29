@@ -1,7 +1,7 @@
 package bigdata.service;
 
-import bigdata.Dao.rawDao;
-import bigdata.domain.rawData;
+import bigdata.dao.RawDao;
+import bigdata.domain.RawData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +11,14 @@ import java.util.*;
 
 
 @Service
-public class rawDataService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(rawDataService.class);
+public class RawDataService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(RawDataService.class);
 
     @Autowired
-    private rawDao rawDao;
+    private RawDao rawDao;
 
-    public List<rawData> getData(){
-        List<rawData> datas = rawDao.getDatas();
+    public List<RawData> getData(){
+        List<RawData> datas = rawDao.getDatas();
         return datas;
     }
 }

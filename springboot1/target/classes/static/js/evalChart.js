@@ -1,4 +1,4 @@
-var evalchart = {
+var evalChart = {
     url:{
         getData:"/getEvalData"
     },
@@ -8,17 +8,17 @@ var evalchart = {
             function callback(data) {
                 if(data.success){
                     //alert("start");
-                    evalchart.fn.drawEvalChart1(data);
-                    evalchart.fn.drawEvalChart2(data);
-                    evalchart.fn.drawEvalChart3(data);
-                    //bigdata.fn.drawCustomizedPieChart(data);
+                    evalChart.fn.drawEvalChart1(data);
+                    evalChart.fn.drawEvalChart2(data);
+                    evalChart.fn.drawEvalChart3(data);
+                    //followTable.fn.drawCustomizedPieChart(data);
                     //alert("end");
                 }else{
                     alert("错误："+data.msg)
                 }
             }
             var params={};
-            evalchart.fn.ajax(evalchart.url.getData,params,callback)
+            evalChart.fn.ajax(evalChart.url.getData,params,callback)
         },
         drawEvalChart1:function(data){
 

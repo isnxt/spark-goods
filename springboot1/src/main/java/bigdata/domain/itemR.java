@@ -1,6 +1,6 @@
 package bigdata.domain;
 
-public class itemR {
+public class ItemR {
     private int userID;
     private int itemID;
     private double scores;
@@ -26,6 +26,6 @@ public class itemR {
 
     @Override
     public String toString() {
-        return "itemR:"+itemID+" "+userID+" "+scores;
+        return "ItemR:"+itemID+" "+userID+" "+scores;
     }
 }

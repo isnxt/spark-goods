@@ -1,8 +1,6 @@
-package bigdata.Dao;
+package bigdata.dao;
 
-import bigdata.domain.Follow;
-import bigdata.domain.eval;
-import bigdata.domain.fpg;
+import bigdata.domain.Fpg;
 import bigdata.utils.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
@@ -12,13 +10,13 @@ import java.util.List;
 
 
 @Component
-public class fpgDao {
-    public List<fpg> getDatas(){
+public class FpgDao {
+    public List<Fpg> getDatas(){
         try{
-            String sql = "select antecedent,consequent,confidence from fpg";
+            String sql = "select antecedent,consequent,confidence from Fpg";
             System.out.println("sql: "+sql);
             QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
-            List<fpg> beanList = runner.query(sql,new BeanListHandler<fpg>(fpg.class));
+            List<Fpg> beanList = runner.query(sql,new BeanListHandler<Fpg>(Fpg.class));
             /*for(int i=0;i<beanList.size();i++){
                 System.out.println(beanList.get(i).toString());
             }*/

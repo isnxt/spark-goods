@@ -1,7 +1,6 @@
-package bigdata.Dao;
+package bigdata.dao;
 
-import bigdata.domain.Follow;
-import bigdata.domain.rawData;
+import bigdata.domain.RawData;
 import bigdata.utils.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
@@ -11,13 +10,13 @@ import java.util.List;
 
 
 @Component
-public class rawDao {
-    public List<rawData> getDatas(){
+public class RawDao {
+    public List<RawData> getDatas(){
         try{
-            String sql = "select userID,itemID,browser_num,stay_time,collect,buy_num,scores from rawdata order by id desc limit 50";
+            String sql = "select userID,itemID,browser_num,stay_time,collect,buy_num,scores from rawTable order by userID desc limit 50";
             System.out.println("sql: "+sql);
             QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
-            List<rawData> beanList = runner.query(sql,new BeanListHandler<rawData>(rawData.class));
+            List<RawData> beanList = runner.query(sql,new BeanListHandler<RawData>(RawData.class));
 
             return  beanList;
         }catch (Exception e){

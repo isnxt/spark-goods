@@ -1,10 +1,7 @@
 package bigdata.service;
 
-import bigdata.Dao.FollowDao;
-import bigdata.Dao.allFollowDao;
-import bigdata.Dao.singleDao;
-import bigdata.domain.Follow;
-import bigdata.domain.single;
+import bigdata.dao.SingleDao;
+import bigdata.domain.Single;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +11,14 @@ import java.util.*;
 
 
 @Service
-public class singleService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(singleService.class);
+public class SingleService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(SingleService.class);
 
     @Autowired
-    private singleDao singleDao;
+    private SingleDao singleDao;
 
-    public List<single> getData(){
-        List<single> datas = singleDao.getDatas();
+    public List<Single> getData(){
+        List<Single> datas = singleDao.getDatas();
         return datas;
     }
 }

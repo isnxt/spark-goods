@@ -2,7 +2,7 @@ package bigdata.domain;
 
 import java.io.Serializable;
 
-public class rawData implements Serializable{
+public class RawData implements Serializable{
     private int userID;
     private int itemID;
     private int browser_num;

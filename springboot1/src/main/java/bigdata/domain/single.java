@@ -1,6 +1,6 @@
 package bigdata.domain;
 
-public class single {
+public class Single {
 
     private double windowFollowValue;
 
@@ -13,7 +13,7 @@ public class single {
     }
     @Override
     public String toString(){
-        return "single:"+windowFollowValue;
+        return "Single:"+windowFollowValue;
     }
 }
 

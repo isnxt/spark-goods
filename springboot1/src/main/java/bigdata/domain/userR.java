@@ -1,6 +1,6 @@
 package bigdata.domain;
 
-public class userR {
+public class UserR {
     private int userID;
     private int itemID;
     private double scores;
