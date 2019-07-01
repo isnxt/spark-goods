@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : java
-Source Server Version : 80016
-Source Host           : localhost:3306
+Source Server         : mysql
+Source Server Version : 50726
+Source Host           : 127.0.0.1:3306
 Source Database       : spark
 
 Target Server Type    : MYSQL
-Target Server Version : 80016
+Target Server Version : 50726
 File Encoding         : 65001
 
-Date: 2019-06-28 15:14:18
+Date: 2019-07-01 09:08:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -54,7 +54,7 @@ CREATE TABLE `fpg` (
 DROP TABLE IF EXISTS `itemmap`;
 CREATE TABLE `itemmap` (
   `itemID` int(11) NOT NULL,
-  `itemName` varchar(255) NOT NULL,
+  `itemName` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`itemID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -77,14 +77,15 @@ CREATE TABLE `itemrecommend` (
 -- ----------------------------
 DROP TABLE IF EXISTS `rawdata`;
 CREATE TABLE `rawdata` (
+  `rawID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
   `itemID` int(11) NOT NULL,
   `browser_num` int(11) NOT NULL,
-  `stay_time` float NOT NULL,
+  `stay_time` float DEFAULT NULL,
   `collect` int(11) NOT NULL,
   `buy_num` int(11) NOT NULL,
-  `scores` double NOT NULL,
-  PRIMARY KEY (`userID`,`itemID`),
+  `scores` double DEFAULT NULL,
+  PRIMARY KEY (`userID`,`itemID`,`rawID`),
   KEY `itemID` (`itemID`),
   CONSTRAINT `rawdata_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `usermap` (`userID`),
   CONSTRAINT `rawdata_ibfk_2` FOREIGN KEY (`itemID`) REFERENCES `itemmap` (`itemID`)
@@ -107,7 +108,7 @@ CREATE TABLE `test` (
 DROP TABLE IF EXISTS `usermap`;
 CREATE TABLE `usermap` (
   `userID` int(11) NOT NULL,
-  `userName` varchar(255) NOT NULL,
+  `userName` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

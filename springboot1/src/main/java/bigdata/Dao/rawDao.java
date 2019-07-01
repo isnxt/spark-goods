@@ -13,7 +13,7 @@ import java.util.List;
 public class RawDao {
     public List<RawData> getDatas(){
         try{
-            String sql = "select userID,itemID,browser_num,stay_time,collect,buy_num,scores from rawTable order by userID desc limit 50";
+            String sql = "select userID,itemID,browser_num,stay_time,collect,buy_num,scores from rawdata order by userID desc limit 50";
             System.out.println("sql: "+sql);
             QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
             List<RawData> beanList = runner.query(sql,new BeanListHandler<RawData>(RawData.class));
