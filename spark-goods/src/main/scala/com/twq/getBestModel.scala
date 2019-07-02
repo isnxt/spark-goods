@@ -7,9 +7,7 @@ object getBestModel {
 
   def bestModel(): (String) ={
 
-    val dbc = "jdbc:mysql://localhost:3306/spark?user=root&password=root"
-    classOf[com.mysql.jdbc.Driver]
-    val conn = DriverManager.getConnection(dbc)
+    val conn = ConnectionPool.getConnection
     var rank=10
     var iterations=10
     var lambda=0.1

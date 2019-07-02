@@ -13,7 +13,7 @@ import java.util.List;
 public class SingleFollowDao {
     public List<SingleFollow> getDatas(){
         try{
-            String sql = "select windowFollowValue from singlefollowdata";
+            String sql = "select windowFollowValue from followsingle";
             System.out.println("sql: "+sql);
             QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
             List<SingleFollow> beanList = runner.query(sql,new BeanListHandler<SingleFollow>(SingleFollow.class));

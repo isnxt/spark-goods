@@ -13,7 +13,7 @@ import java.util.List;
 public class WindowFollowDao {
     public List<WindowFollow> getDatas(){
         try{
-            String sql = "select * from windowfollowdata order by followValue desc limit 10";
+            String sql = "select * from followwindow order by followValue desc limit 10";
             System.out.println("sql: "+sql);
             QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
             List<WindowFollow> beanList = runner.query(sql,new BeanListHandler<WindowFollow>(WindowFollow.class));

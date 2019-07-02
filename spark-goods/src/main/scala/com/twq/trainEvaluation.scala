@@ -129,7 +129,7 @@ object trainEvaluation {
     val endTime = new DateTime()
     val Rmse = computeRMSE(model, validationData)
     val duration = new Duration(startTime, endTime)
-    println(f"训练参数:rank:$rank%3d,iterations:$iterations%.2f ,lambda = $lambda%.2f 结果:Rmse=$Rmse%.2f" + "训练需要时间:" + duration.getMillis + "毫秒")
+    println(f"训练参数：rank:$rank%3d,iterations:$iterations%.2f ,lambda = $lambda%.2f 结果 Rmse=$Rmse%.2f" + "训练需要时间" + duration.getMillis + "毫秒")
     (Rmse, duration.getMillis())
   }
 
@@ -152,3 +152,37 @@ object trainEvaluation {
   }
 
 }
+
+/*
+==========数据准备阶段===============
+从数据库取出数据中...
+处理完毕......共计：1086条ratings
+共计：ratings: 1086 User 50 item 50
+将数据分为
+  trainData:765  validationData:204  testData:117
+==========训练验证阶段===============
+-----评估 rank参数使用 ---------
+训练参数：rank:  5,iterations:10.00 ,lambda = 0.10 结果 Rmse=2.47训练需要时间5385毫秒
+训练参数：rank: 10,iterations:10.00 ,lambda = 0.10 结果 Rmse=2.47训练需要时间5751毫秒
+训练参数：rank: 15,iterations:10.00 ,lambda = 0.10 结果 Rmse=2.25训练需要时间3186毫秒
+训练参数：rank: 20,iterations:10.00 ,lambda = 0.10 结果 Rmse=2.19训练需要时间3207毫秒
+训练参数：rank: 50,iterations:10.00 ,lambda = 0.10 结果 Rmse=2.17训练需要时间3230毫秒
+训练参数：rank:100,iterations:10.00 ,lambda = 0.10 结果 Rmse=2.17训练需要时间3843毫秒
+-----评估 numIterations ---------
+训练参数：rank: 10,iterations:5.00 ,lambda = 0.10 结果 Rmse=2.43训练需要时间1613毫秒
+训练参数：rank: 10,iterations:10.00 ,lambda = 0.10 结果 Rmse=2.52训练需要时间2651毫秒
+训练参数：rank: 10,iterations:15.00 ,lambda = 0.10 结果 Rmse=2.43训练需要时间4385毫秒
+训练参数：rank: 10,iterations:20.00 ,lambda = 0.10 结果 Rmse=2.53训练需要时间6301毫秒
+训练参数：rank: 10,iterations:25.00 ,lambda = 0.10 结果 Rmse=2.40训练需要时间5905毫秒
+-----评估 lambda ---------
+训练参数：rank: 10,iterations:10.00 ,lambda = 0.05 结果 Rmse=2.64训练需要时间2750毫秒
+训练参数：rank: 10,iterations:10.00 ,lambda = 0.10 结果 Rmse=2.37训练需要时间3140毫秒
+训练参数：rank: 10,iterations:10.00 ,lambda = 1.00 结果 Rmse=2.02训练需要时间2531毫秒
+训练参数：rank: 10,iterations:10.00 ,lambda = 5.00 结果 Rmse=2.38训练需要时间2512毫秒
+训练参数：rank: 10,iterations:10.00 ,lambda = 10.00 结果 Rmse=2.38训练需要时间2227毫秒
+-----所有参数交叉评估找出最好的参数组合---------
+==========测试阶段===============
+
+Process finished with exit code 0
+
+ */

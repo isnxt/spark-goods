@@ -13,7 +13,7 @@ import java.util.List;
 public class UserDao {
     public List<UserR> getDatas(){
         try{
-            String sql = "select userID,itemID,scores from userrecommend";
+            String sql = "select userID,itemID,scores from recuser";
             System.out.println("sql: "+sql);
             QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
             List<UserR> beanList = runner.query(sql,new BeanListHandler<UserR>(UserR.class));

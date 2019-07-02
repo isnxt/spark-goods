@@ -104,7 +104,7 @@ public class StreamingGoods implements Serializable{
 							Connection connection=null;
 							try{
 								connection=ConnectionPool.getConnection();
-								String sql="insert into followData(itemID,followValue) values(?,?) on duplicate key update followValue=?";
+								String sql="insert into follow(itemID,followValue) values(?,?) on duplicate key update followValue=?";
 								PreparedStatement pst=connection.prepareStatement(sql);
 								System.out.println();
 								while(tuple2Iterator.hasNext()){
@@ -155,8 +155,8 @@ public class StreamingGoods implements Serializable{
 							Connection connection=null;
 							try{
 								connection=ConnectionPool.getConnection();
-								String sql="insert into windowFollowData(itemID,followValue) values(?,?) on duplicate key update followValue=?";
-								String singeSql="insert into singleFollowValue(windowFollowValue) values(?)";
+								String sql="insert into followWindow(itemID,followValue) values(?,?) on duplicate key update followValue=?";
+								String singeSql="insert into followSingle(windowFollowValue) values(?)";
 								PreparedStatement pst=connection.prepareStatement(sql);
 								PreparedStatement pst2=connection.prepareStatement(singeSql);
 								System.out.println();

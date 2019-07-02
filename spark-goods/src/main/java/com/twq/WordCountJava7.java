@@ -30,7 +30,6 @@ public class WordCountJava7 {
         }
 
         JavaSparkContext sc = new JavaSparkContext(conf);
-
         JavaRDD<String> inputRDD = sc.textFile(dataPath + "/test.txt");
 
         JavaRDD<String> wordsRDD = inputRDD.flatMap(new FlatMapFunction<String, String>() {
@@ -61,7 +60,7 @@ public class WordCountJava7 {
             File outputFile = new File(dataPath + "/wordcount");
             if (outputFile.exists()) {
                 File[] files = outputFile.listFiles();
-                for(File file: files) {
+                for (File file : files) {
                     file.delete();
                 }
                 outputFile.delete();

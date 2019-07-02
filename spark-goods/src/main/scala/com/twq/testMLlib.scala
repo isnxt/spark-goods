@@ -56,7 +56,6 @@ object testMLlib {
       pst2.executeUpdate()
       pst1.close();pst2.close()
       println("清空item成功")
-
       val pstu = conn.prepareStatement(userSql)
       val psti=conn.prepareStatement(itemSql)
       users.foreach{user =>{
@@ -67,20 +66,18 @@ object testMLlib {
           pstu.setInt(2,array.product)
           pstu.setDouble(3,array.rating)
           pstu.executeUpdate()
-//          println("添加成功")
+          println("添加成功")
         }}
       }}
-      println("================================")
-
       items.foreach(item =>{
         val arrays=model.recommendProducts(item,num)
-        println("商品："+item)
+        //println("用户："+item)
         arrays.foreach{array =>{
-          psti.setInt(1,item)
-          psti.setInt(2,array.product)
-          psti.setDouble(3,array.rating)
-          psti.executeUpdate()
-//          println("添加成功")
+          pstu.setInt(1,item)
+          pstu.setInt(2,array.product)
+          pstu.setDouble(3,array.rating)
+          pstu.executeUpdate()
+          //println("添加成功")
         }}
       })
       psti.close()

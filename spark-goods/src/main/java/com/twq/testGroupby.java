@@ -10,12 +10,6 @@ public class  testGroupby {
     /**
      * 数据库连接
      */
-    public static final String driver="com.mysql.jdbc.Driver";
-    //url指向要访问的数据库名spark
-    public static final String url="jdbc:mysql://127.0.0.1:3306/spark";
-    public static final String user="root";
-    public static final String password="shenmiaomi";
-
     public static void main(String[] args){
         Connection conn=null;
         Statement stmt=null;

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50726
 File Encoding         : 65001
 
-Date: 2019-07-01 15:05:27
+Date: 2019-07-02 11:23:06
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,11 +28,33 @@ CREATE TABLE `evaluation` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Table structure for followdata
+-- Table structure for follow
 -- ----------------------------
-DROP TABLE IF EXISTS `followdata`;
-CREATE TABLE `followdata` (
-  `followValue` int(11) DEFAULT NULL
+DROP TABLE IF EXISTS `follow`;
+CREATE TABLE `follow` (
+  `itemID` int(11) NOT NULL,
+  `followValue` int(11) DEFAULT NULL,
+  PRIMARY KEY (`itemID`),
+  CONSTRAINT `follow_ibfk_1` FOREIGN KEY (`itemID`) REFERENCES `item` (`itemID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for followsingle
+-- ----------------------------
+DROP TABLE IF EXISTS `followsingle`;
+CREATE TABLE `followsingle` (
+  `windowFollowValue` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for followwindow
+-- ----------------------------
+DROP TABLE IF EXISTS `followwindow`;
+CREATE TABLE `followwindow` (
+  `itemID` int(11) NOT NULL,
+  `followValue` int(11) DEFAULT NULL,
+  PRIMARY KEY (`itemID`),
+  CONSTRAINT `followwindow_ibfk_1` FOREIGN KEY (`itemID`) REFERENCES `item` (`itemID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -46,33 +68,20 @@ CREATE TABLE `fpg` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Table structure for itemmap
+-- Table structure for item
 -- ----------------------------
-DROP TABLE IF EXISTS `itemmap`;
-CREATE TABLE `itemmap` (
+DROP TABLE IF EXISTS `item`;
+CREATE TABLE `item` (
   `itemID` int(11) NOT NULL,
   `itemName` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`itemID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Table structure for itemrecommend
+-- Table structure for raw
 -- ----------------------------
-DROP TABLE IF EXISTS `itemrecommend`;
-CREATE TABLE `itemrecommend` (
-  `itemID` int(11) NOT NULL,
-  `userID` int(11) NOT NULL,
-  `scores` double DEFAULT NULL,
-  PRIMARY KEY (`itemID`,`userID`),
-  CONSTRAINT `itemrecommend_ibfk_1` FOREIGN KEY (`itemID`) REFERENCES `itemmap` (`itemID`),
-  CONSTRAINT `itemrecommend_ibfk_2` FOREIGN KEY (`userID`) REFERENCES `usermap` (`userID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Table structure for rawdata
--- ----------------------------
-DROP TABLE IF EXISTS `rawdata`;
-CREATE TABLE `rawdata` (
+DROP TABLE IF EXISTS `raw`;
+CREATE TABLE `raw` (
   `userID` int(11) NOT NULL,
   `itemID` int(11) NOT NULL,
   `browser_num` int(11) NOT NULL,
@@ -81,16 +90,37 @@ CREATE TABLE `rawdata` (
   `buy_num` int(11) NOT NULL,
   `scores` double DEFAULT NULL,
   PRIMARY KEY (`userID`,`itemID`),
-  CONSTRAINT `rawdata_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `usermap` (`userID`),
-  CONSTRAINT `rawdata_ibfk_2` FOREIGN KEY (`itemID`) REFERENCES `itemmap` (`itemID`)
+  KEY `rawdata_ibfk_2` (`itemID`),
+  CONSTRAINT `raw_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`),
+  CONSTRAINT `raw_ibfk_2` FOREIGN KEY (`itemID`) REFERENCES `item` (`itemID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Table structure for singlefollowdata
+-- Table structure for recitem
 -- ----------------------------
-DROP TABLE IF EXISTS `singlefollowdata`;
-CREATE TABLE `singlefollowdata` (
-  `windowFollowValue` int(11) DEFAULT NULL
+DROP TABLE IF EXISTS `recitem`;
+CREATE TABLE `recitem` (
+  `itemID` int(11) NOT NULL,
+  `userID` int(11) NOT NULL,
+  `scores` double(255,0) DEFAULT NULL,
+  PRIMARY KEY (`itemID`,`userID`),
+  KEY `itemrecommend_ibfk_2` (`userID`),
+  CONSTRAINT `recitem_ibfk_1` FOREIGN KEY (`itemID`) REFERENCES `item` (`itemID`),
+  CONSTRAINT `recitem_ibfk_2` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for recuser
+-- ----------------------------
+DROP TABLE IF EXISTS `recuser`;
+CREATE TABLE `recuser` (
+  `userID` int(11) NOT NULL,
+  `itemID` int(11) NOT NULL,
+  `scores` double(255,0) DEFAULT NULL,
+  PRIMARY KEY (`userID`,`itemID`),
+  KEY `userrecommend_ibfk_2` (`itemID`),
+  CONSTRAINT `recuser_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`),
+  CONSTRAINT `recuser_ibfk_2` FOREIGN KEY (`itemID`) REFERENCES `item` (`itemID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -101,39 +131,15 @@ CREATE TABLE `test` (
   `userID` int(11) NOT NULL,
   `num` int(11) NOT NULL,
   PRIMARY KEY (`userID`),
-  CONSTRAINT `test_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `usermap` (`userID`)
+  CONSTRAINT `test_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Table structure for usermap
+-- Table structure for user
 -- ----------------------------
-DROP TABLE IF EXISTS `usermap`;
-CREATE TABLE `usermap` (
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
   `userID` int(11) NOT NULL,
   `userName` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`userID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Table structure for userrecommend
--- ----------------------------
-DROP TABLE IF EXISTS `userrecommend`;
-CREATE TABLE `userrecommend` (
-  `userID` int(11) NOT NULL,
-  `itemID` int(11) NOT NULL,
-  `scores` double(255,0) DEFAULT NULL,
-  PRIMARY KEY (`userID`,`itemID`),
-  CONSTRAINT `userrecommend_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `usermap` (`userID`),
-  CONSTRAINT `userrecommend_ibfk_2` FOREIGN KEY (`itemID`) REFERENCES `itemmap` (`itemID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Table structure for windowfollowdata
--- ----------------------------
-DROP TABLE IF EXISTS `windowfollowdata`;
-CREATE TABLE `windowfollowdata` (
-  `itemID` int(11) NOT NULL,
-  `followValue` int(11) DEFAULT NULL,
-  PRIMARY KEY (`itemID`),
-  CONSTRAINT `windowfollowdata_ibfk_1` FOREIGN KEY (`itemID`) REFERENCES `itemmap` (`itemID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

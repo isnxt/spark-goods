@@ -13,7 +13,7 @@ import java.util.List;
 public class FollowDao {
     public List<Follow> getDatas(){
         try{
-            String sql = "select * from followdata order by followValue desc limit 10";
+            String sql = "select * from follow order by followValue desc limit 10";
             System.out.println("sql: "+sql);
             QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
             List<Follow> beanList = runner.query(sql,new BeanListHandler<Follow>(Follow.class));

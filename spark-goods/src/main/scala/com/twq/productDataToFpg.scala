@@ -10,10 +10,10 @@ object productDataToFpg {
   def productData: (SparkContext,RDD[String]) = {
     val driver="com.mysql.jdbc.Driver"
     //url指向要访问的数据库名spark
-    val url="jdbc:mysql://127.0.0.1:3306/spark?characterEncoding=utf8&useSSL=true"
+    val url="jdbc:mysql://127.0.0.1:3306/spark"
     val user="root"
     val password="root"
-    val table="(select userID,itemID from rawdata where buy_num >0 order by userID) as fpgData"
+    val table="(select userID,itemID from raw where buy_num >0 order by userID) as fpgData"
 
     val sc=new SparkContext(new SparkConf().setAppName("productDataToFpg").setMaster("local[4]"))
     val sqlContext=new SQLContext(sc)

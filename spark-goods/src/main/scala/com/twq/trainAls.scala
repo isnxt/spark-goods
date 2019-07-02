@@ -44,10 +44,10 @@ object trainAls {
     val itemFeatures=model.productFeatures
     val users=userFeatures.map(r => r._1).collect()
     val items=itemFeatures.map(r => r._1).collect()
-    val delUsertb="truncate table userRecommend"
-    val delItemtb="truncate table itemRecommend"
-    val userSql="insert into userRecommend values(?,?,?)"
-    val itemSql="insert into itemRecommend values(?,?,?)"
+    val delUsertb="truncate table recUser"
+    val delItemtb="truncate table recItem"
+    val userSql="insert into recUser values(?,?,?)"
+    val itemSql="insert into recItem values(?,?,?)"
     val num=3 //保存条数
     val conn=null
     try{
@@ -64,9 +64,8 @@ object trainAls {
       val psti=conn.prepareStatement(itemSql)
       users.foreach{user =>{
         val arrays=model.recommendProducts(user,num)
-        println("用户："+user+arrays)
+        //println("用户："+user)
         arrays.foreach{array =>{
-          println("\t"+array)
           pstu.setInt(1,user)
           pstu.setInt(2,array.product)
           pstu.setDouble(3,array.rating)
@@ -74,12 +73,10 @@ object trainAls {
           //println("添加成功")
         }}
       }}
-      pstu.close()
       items.foreach(item =>{
         val arrays=model.recommendUsers(item,num)
-        println("商品："+item+arrays)
+        //println("用户："+item)
         arrays.foreach{array =>{
-          println("\t"+array)
           psti.setInt(1,item)
           psti.setInt(2,array.user)
           psti.setDouble(3,array.rating)
@@ -88,6 +85,7 @@ object trainAls {
         }}
       })
       psti.close()
+      pstu.close()
     }finally {
       ConnectionPool.returnConnection(conn)
     }
