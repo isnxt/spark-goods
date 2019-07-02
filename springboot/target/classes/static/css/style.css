@@ -1,0 +1,46 @@
+.bg-lavender{
+	background:#ac96ea;
+}
+.bg-jeans{
+	background:#73b1f4;
+}
+.bg-aqua{
+	background:#4fc1e9;
+}
+
+.bg-mint{
+	background:#46cfad;
+}
+
+.bg-emerald{
+	background:#42CB71;
+}
+
+.bg-grass{
+	background:#9ed36a;
+}
+
+.bg-fruit{
+	background:#ec5564;
+}
+.bg-sweet{
+	background:#fb6d51;
+}
+.bg-sun{
+	background:#fecd67;
+}
+.no-underline:link{text-decoration:none;}
+
+.no-underline:visited{text-decoration:none; font-weight: bold}
+
+.no-underline:hover{text-decoration:none;font-weight: bold}
+
+.no-underline:active{text-decoration:none;font-weight: bold}
+
+.card-hover:hover{
+	color: white;
+}
+
+
+div.box-icon i.fa { display: inline-block; }
+div.box-icon img { display: none; }
