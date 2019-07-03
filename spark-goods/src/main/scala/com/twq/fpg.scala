@@ -12,11 +12,11 @@ object fpg {
 
   def main(args: Array[String]): Unit = {
     SetLogger
-    /*val conf=new SparkConf().setAppName("fpg").setMaster("local[2]")
-    val sc=new SparkContext(conf)
     //读取样本数据
-    val path="testData/fpg.txt"
-    val data=sc.textFile(path)*/
+//    val conf=new SparkConf().setAppName("fpg").setMaster("local[2]")
+//    val sc=new SparkContext(conf)
+//    val path="testData/fpg.txt"
+//    val data=sc.textFile(path)
     println("从数据库中获取数据并进行处理......")
     val startTime1 = new DateTime()
     val (sc,data)=productDataToFpg.productData
@@ -24,7 +24,7 @@ object fpg {
     val duration1 = new Duration(startTime1, endTime1)
     println("数据处理完毕......处理时间为："+duration1.getMillis()+" ms")
     val examples=data.map(_.split(" ").distinct).cache()
-    //data.foreach(println)
+    data.foreach(println)
     //建立模型
     val minSupport=0.2
     val minConfidence=0.8
@@ -44,7 +44,7 @@ object fpg {
         println(itemset.items.mkString("[",",","]")+", "+itemset.freq)
     })*/
     //连接数据库
-    var conn = ConnectionPool.getConnection()
+    var conn = ConnectionPool.getConnection
     try {
       //清空表
       val pstd=conn.prepareStatement("truncate table fpg")

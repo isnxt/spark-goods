@@ -1,305 +1,490 @@
 var evalChart = {
-    url:{
-        getData:"/getEvalData"
+    url: {
+        getData: "/getEvalData"
     },
-    fn:{
-        renderMain:function(){
+    fn: {
+        renderMain: function () {
             //ajax的回调函数
             function callback(data) {
-                if(data.success){
+                if (data.success) {
                     //alert("start");
                     evalChart.fn.drawEvalChart1(data);
                     evalChart.fn.drawEvalChart2(data);
                     evalChart.fn.drawEvalChart3(data);
                     //followTable.fn.drawCustomizedPieChart(data);
                     //alert("end");
-                }else{
-                    alert("错误："+data.msg)
+                } else {
+                    alert("错误：" + data.msg)
                 }
             }
-            var params={};
-            evalChart.fn.ajax(evalChart.url.getData,params,callback)
-        },
-        drawEvalChart1:function(data){
 
-            var datas=data.data;
+            var params = {};
+            evalChart.fn.ajax(evalChart.url.getData, params, callback)
+        },
+        drawEvalChart1: function (data) {
+
+            var datas = data.data;
             console.log(data.data);
-            var rank=[],rmse=[],time=[];
-            var k=0;
-            for(var i=0;i<datas.length;i++){
-                var lambda=datas[i].lambda;
-                var ranks=datas[i].rank;
-                var rmses=datas[i].rmse;
-                var times=datas[i].time;
-                var iterations=datas[i].iterations;
-                if(iterations===10&&lambda===0.1){
-                   k++;
-                   rank.push(ranks);
-                   rmse.push(rmses);
-                   time.push(times);
-                   if(k===6) break;
-               }
-            }
-
-            option = {
-                tooltip: {
-                    trigger: 'axis',
-                    axisPointer: {
-                        type: 'cross',
-                        crossStyle: {
-                            color: '#999'
-                        }
-                    }
-                },
-                toolbox: {
-                    feature: {
-                        dataView: {show: true, readOnly: false},
-                        magicType: {show: true, type: ['line', 'bar']},
-                        restore: {show: true},
-                        saveAsImage: {show: true}
-                    }
-                },
-                legend: {
-                    data:['均方误差','训练时间']
-                },
-                xAxis: [
-                    {
-                        type: 'category',
-                        data: rank,
-                        axisPointer: {
-                            type: 'shadow'
-                        }
-                    }
-                ],
-                yAxis: [
-                    {
-                        type: 'value',
-                        name: '均方误差',
-                        min: 0,
-                        max: 3.5,
-                        interval: 0.5,
-                        axisLabel: {
-                            formatter: '{value} '
-                        }
-                    },
-                    {
-                        type: 'value',
-                        name: '训练时间',
-                        min: 0,
-                        max: 20000,
-                        interval: 2000,
-                        axisLabel: {
-                            formatter: '{value} ms'
-                        }
-                    }
-                ],
-                series: [
-                    {
-                        name:'均方误差',
-                        type:'bar',
-                        data:rmse
-                    },
-                    {
-                        name:'训练时间',
-                        type:'line',
-                        yAxisIndex: 1,
-                        data:time
-                    }
-                ]
-            };
-            //alert(document.getElementById("followChart1"));
-            var image = echarts.init(document.getElementById("evalChart1"),'macarons');
-            image.setOption(option)
-        },
-        drawEvalChart2:function(data){
-
-            var datas=data.data;
-            console.log(data.data);
-            var iterations=[],rmse=[],time=[];
-            for(var i=6;i<11;i++){
-                    var rmses=datas[i].rmse;
-                    var times=datas[i].time;
-                    var iteration=datas[i].iterations;
-                iterations.push(iteration);
-                    rmse.push(rmses);
-                    time.push(times);
-            }
-
-            option = {
-                tooltip: {
-                    trigger: 'axis',
-                    axisPointer: {
-                        type: 'cross',
-                        crossStyle: {
-                            color: '#999'
-                        }
-                    }
-                },
-                toolbox: {
-                    feature: {
-                        dataView: {show: true, readOnly: false},
-                        magicType: {show: true, type: ['line', 'bar']},
-                        restore: {show: true},
-                        saveAsImage: {show: true}
-                    }
-                },
-                legend: {
-                    data:['均方误差','训练时间']
-                },
-                xAxis: [
-                    {
-                        type: 'category',
-                        data: iterations,
-                        axisPointer: {
-                            type: 'shadow'
-                        }
-                    }
-                ],
-                yAxis: [
-                    {
-                        type: 'value',
-                        name: '均方误差',
-                        min: 0,
-                        max: 3.5,
-                        interval: 0.5,
-                        axisLabel: {
-                            formatter: '{value} '
-                        }
-                    },
-                    {
-                        type: 'value',
-                        name: '训练时间',
-                        min: 0,
-                        max: 20000,
-                        interval: 2000,
-                        axisLabel: {
-                            formatter: '{value} ms'
-                        }
-                    }
-                ],
-                series: [
-                    {
-                        name:'均方误差',
-                        type:'bar',
-                        data:rmse
-                    },
-                    {
-                        name:'训练时间',
-                        type:'line',
-                        yAxisIndex: 1,
-                        data:time
-                    }
-                ]
-            };
-            //alert(document.getElementById("followChart1"));
-            var image = echarts.init(document.getElementById("evalChart2"),'macarons');
-            image.setOption(option)
-        },
-        drawEvalChart3:function(data){
-
-            var datas=data.data;
-            console.log(data.data);
-            var lambdas=[],rmses=[],times=[];
-            for(var i=11;i<16;i++){
-                var lambda=datas[i].lambda;
-                var rmse=datas[i].rmse;
-                var time=datas[i].time;
-                //alert(lambda+" "+rmse+" "+time)
-                lambdas.push(lambda);
-                rmses.push(rmse);
-                times.push(time);
-            }
-
-            option = {
-                tooltip: {
-                    trigger: 'axis',
-                    axisPointer: {
-                        type: 'cross',
-                        crossStyle: {
-                            color: '#999'
-                        }
-                    }
-                },
-                toolbox: {
-                    feature: {
-                        dataView: {show: true, readOnly: false},
-                        magicType: {show: true, type: ['line', 'bar']},
-                        restore: {show: true},
-                        saveAsImage: {show: true}
-                    }
-                },
-                legend: {
-                    data:['均方误差','训练时间']
-                },
-                xAxis: [
-                    {
-                        type: 'category',
-                        data: lambdas,
-                        axisPointer: {
-                            type: 'shadow'
-                        }
-                    }
-                ],
-                yAxis: [
-                    {
-                        type: 'value',
-                        name: '均方误差',
-                        min: 0,
-                        max: 3.5,
-                        interval: 0.5,
-                        axisLabel: {
-                            formatter: '{value} '
-                        }
-                    },
-                    {
-                        type: 'value',
-                        name: '训练时间',
-                        min: 0,
-                        max: 20000,
-                        interval: 2000,
-                        axisLabel: {
-                            formatter: '{value} ms'
-                        }
-                    }
-                ],
-                series: [
-                    {
-                        name:'均方误差',
-                        type:'bar',
-                        data:rmses
-                    },
-                    {
-                        name:'训练时间',
-                        type:'line',
-                        yAxisIndex: 1,
-                        data:times
-                    }
-                ]
-            };
-            //alert(document.getElementById("followChart1"));
-            var image = echarts.init(document.getElementById("evalChart3"),'macarons');
-            image.setOption(option)
-        },
-        ajax:function(url,parameters,successCallBackFun){
-            $.ajax({
-                contentType : 'application/json',
-                //请求方式
-                type: "POST",
-                //请求的url
-                url: url,
-                //参数
-                data: parameters,
-                cache:false,
-                //ajax成功
-                success: function (data) {
-                    //成功的回调函数
-                    successCallBackFun(data);
-                },
-                error: function (XMLHttpRequest,data) {
-                    //错误的回调函数
-                    alert(data);
+            var ranks = [], rmses = [], times = [];
+            var k = 0;
+            for (var i = 0; i < datas.length; i++) {
+                var lambda = datas[i].lambda;
+                var rank = datas[i].rank;
+                var rmse = datas[i].rmse;
+                var time = datas[i].time;
+                var iteration = datas[i].iterations;
+                if (iteration === 10 && lambda === 0.1) {
+                    k++;
+                    ranks.push(rank);
+                    rmses.push(rmse);
+                    times.push(time);
+                    if (k === 6) break;
                 }
-            });
+            }
+
+            option1 = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross',
+                        crossStyle: {
+                            color: '#999'
+                        }
+                    }
+                },
+                grid: {
+                    containLabel: true
+                },
+                toolbox: {
+                    feature: {
+                        dataView: {show: true, readOnly: false},
+                        magicType: {show: true, type: ['line', 'bar']},
+                        restore: {show: true},
+                        saveAsImage: {show: true}
+                    }
+                },
+                legend: {
+                    data: ['柱状', '折线']
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: ranks,
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        name: '均方误差',
+                        min: 2,
+                        max: 2.8,
+                        interval: 0.2,
+                        axisLabel: {
+                            formatter: '{value} '
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        name: '柱状',
+                        type: 'bar',
+                        data: rmses
+                    },
+                    {
+                        name: '折线',
+                        type: 'line',
+                        yAxisIndex: 1,
+                        data: rmses
+                    }
+                ]
+            };
+            //alert(document.getElementById("followChart1"));
+            var image1 = echarts.init(document.getElementById("evalChart1-1"), 'macarons');
+            image1.setOption(option1);
+            option2 = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross',
+                        crossStyle: {
+                            color: '#999'
+                        }
+                    }
+                },
+                grid: {
+                    containLabel: true
+                },
+                toolbox: {
+                    feature: {
+                        dataView: {show: true, readOnly: false},
+                        magicType: {show: true, type: ['line', 'bar']},
+                        restore: {show: true},
+                        saveAsImage: {show: true}
+                    }
+                },
+                legend: {
+                    data: ['柱状', '折线']
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: ranks,
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        name: '训练时间',
+                        min: 0,
+                        max: 30000,
+                        interval: 5000,
+                        axisLabel: {
+                            formatter: '{value} ms'
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        name: '柱状',
+                        type: 'bar',
+                        data: times
+                    },
+                    {
+                        name: '折线',
+                        type: 'line',
+                        yAxisIndex: 1,
+                        data: times
+                    }
+                ]
+            };
+            //alert(document.getElementById("followChart1"));
+            var image2 = echarts.init(document.getElementById("evalChart1-2"), 'macarons');
+            image2.setOption(option2)
         },
-    }
-};
+        drawEvalChart2: function (data) {
+
+            var datas = data.data;
+            console.log(data.data);
+            var iterations = [], rmses = [], times = [];
+            var k = 0;
+            for (var i = 6; i < 11; i++) {
+                var lambda = datas[i].lambda;
+                var rmse = datas[i].rmse;
+                var rank = datas[i].rank;
+                var time = datas[i].time;
+                var iteration = datas[i].iterations;
+                if (rank === 10 && lambda === 0.1) {
+                    k++;
+                    iterations.push(iteration);
+                    rmses.push(rmse);
+                    times.push(time);
+                    if (k === 6) break;
+                }
+            }
+
+                option1 = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    grid: {
+                        containLabel: true
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data: ['柱状', '折线']
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            data: iterations,
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '均方误差',
+                            min: 2,
+                            max: 2.8,
+                            interval: 0.2,
+                            axisLabel: {
+                                formatter: '{value} '
+                            }
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '柱状',
+                            type: 'bar',
+                            data: rmses
+                        },
+                        {
+                            name: '折线',
+                            type: 'line',
+                            yAxisIndex: 1,
+                            data: rmses
+                        }
+                    ]
+                };
+                //alert(document.getElementById("followChart1"));
+                var image1 = echarts.init(document.getElementById("evalChart2-1"), 'macarons');
+                image1.setOption(option1);
+                option2 = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    grid: {
+                        containLabel: true
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data: ['柱状', '折线']
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            data: iterations,
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '训练时间',
+                            min: 0,
+                            max: 10000,
+                            interval: 2000,
+                            axisLabel: {
+                                formatter: '{value} ms'
+                            }
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '柱状',
+                            type: 'bar',
+                            data: times
+                        },
+                        {
+                            name: '折线',
+                            type: 'line',
+                            yAxisIndex: 1,
+                            data: times
+                        }
+                    ]
+                };
+                //alert(document.getElementById("followChart1"));
+                var image2 = echarts.init(document.getElementById("evalChart2-2"), 'macarons');
+                image2.setOption(option2)
+            }
+        ,
+            drawEvalChart3:function (data) {
+
+                var datas = data.data;
+                console.log(data.data);
+                var k = 0;
+                var lambdas = [], rmses = [], times = [];
+                for (var i = 11; i < 16; i++) {
+                    var lambda = datas[i].lambda;
+                    var rmse = datas[i].rmse;
+                    var time = datas[i].time;
+                    var rank = datas[i].rank;
+                    var iteration = datas[i].iterations;
+                    //alert(lambda+" "+rmse+" "+time)
+                    if (rank === 10 && iteration === 10) {
+                        k++;
+                        lambdas.push(lambda);
+                        rmses.push(rmse);
+                        times.push(time);
+                        if (k === 6) break;
+                    }
+
+                }
+
+                option1 = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    grid: {
+                        containLabel: true
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data: ['柱状', '折线']
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            data: lambdas,
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '均方误差',
+                            min: 2,
+                            max: 2.8,
+                            interval: 0.2,
+                            axisLabel: {
+                                formatter: '{value} '
+                            }
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '柱状',
+                            type: 'bar',
+                            data: rmses
+                        },
+                        {
+                            name: '折线',
+                            type: 'line',
+                            yAxisIndex: 1,
+                            data: rmses
+                        }
+                    ]
+                };
+                //alert(document.getElementById("followChart1"));
+                var image1 = echarts.init(document.getElementById("evalChart3-1"), 'macarons');
+                image1.setOption(option1);
+                option2 = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    grid: {
+                        containLabel: true
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data: ['柱状', '折线']
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            data: lambdas,
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '训练时间',
+                            min: 0,
+                            max: 10000,
+                            interval: 2000,
+                            axisLabel: {
+                                formatter: '{value} ms'
+                            }
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '柱状',
+                            type: 'bar',
+                            data: times
+                        },
+                        {
+                            name: '折线',
+                            type: 'line',
+                            yAxisIndex: 1,
+                            data: times
+                        }
+                    ]
+                };
+                //alert(document.getElementById("followChart1"));
+                var image2 = echarts.init(document.getElementById("evalChart3-2"), 'macarons');
+                image2.setOption(option2)
+
+            }
+        ,
+            ajax:function (url, parameters, successCallBackFun) {
+                $.ajax({
+                    contentType: 'application/json',
+                    //请求方式
+                    type: "POST",
+                    //请求的url
+                    url: url,
+                    //参数
+                    data: parameters,
+                    cache: false,
+                    //ajax成功
+                    success: function (data) {
+                        //成功的回调函数
+                        successCallBackFun(data);
+                    },
+                    error: function (XMLHttpRequest, data) {
+                        //错误的回调函数
+                        alert(data);
+                    }
+                });
+            }
+        ,
+        }
+    };

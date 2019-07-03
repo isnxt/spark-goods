@@ -262,10 +262,25 @@
                             <!-- Area Chart -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">对rank参数进行评估，其中iterations=10,lambda=0.1</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">评估 rank-rmse ( iterations=10,lambda=0
+                                                                                  .1 )</h6>
                                 </div>
                                 <div class="card-body">
-                                    <div id="evalChart1" class="chart-area">
+                                    <div id="evalChart1-1" class="chart-area">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+        
+                            <!-- Area Chart -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">评估 rank-time ( iterations=10,lambda=0
+                                                                                  .1 )</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div id="evalChart1-2" class="chart-area">
                                     </div>
                                 </div>
                             </div>
@@ -275,10 +290,25 @@
                             <!-- Area Chart -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">对iterations参数进行评估，其中rank=10,lambda=0.1</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">评估 iterations-rmse ( rank=10,lambda=0
+                                                                                  .1 )</h6>
                                 </div>
                                 <div class="card-body">
-                                    <div id="evalChart2" class="chart-area">
+                                    <div id="evalChart2-1" class="chart-area">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+        
+                            <!-- Area Chart -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">评估 iterations-time ( rank=10,lambda=0
+                                                                                  .1 )</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div id="evalChart2-2" class="chart-area">
                                     </div>
                                 </div>
                             </div>
@@ -288,10 +318,26 @@
                             <!-- Area Chart -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">对lambda参数进行评估，其中rank=10,iterations=10</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">评估 lambda-rmse ( rank=10,
+                                                                                  iterations=10 )</h6>
                                 </div>
                                 <div class="card-body">
-                                    <div id="evalChart3" class="chart-area">
+                                    <div id="evalChart3-1" class="chart-area">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-6">
+        
+                            <!-- Area Chart -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">评估 lambda-time ( rank=10,
+                                                                                  iterations=10 )</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div id="evalChart3-2" class="chart-area">
                                     </div>
                                 </div>
                             </div>
@@ -357,8 +403,8 @@
     <script src="../static/vendor/sb-admin-2/js/sb-admin-2.min.js" th:src="@{vendor/sb-admin-2/js/sb-admin-2.min.js}"></script>
     
     <!-- Page level vendor -->
-    <script src="../static/vendor/echarts/js/echarts.min.js" th:src="@{vendor//echarts/js/echarts.min.js}"></script>
-    <script src="../static/vendor/echarts/js/macarons.js" th:src="@{vendor//echarts/js/macarons.js}"></script>
+    <script src="../static/vendor/echarts/js/echarts.min.js" th:src="@{vendor/echarts/js/echarts.min.js}"></script>
+    <script src="../static/vendor/echarts/js/macarons.js" th:src="@{vendor/echarts/js/macarons.js}"></script>
 
     <!-- Page level custom scripts -->
     <script src="../static/js/evalChart.js"

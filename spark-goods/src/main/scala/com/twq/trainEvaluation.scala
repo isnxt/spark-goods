@@ -20,7 +20,7 @@ object trainEvaluation {
 
   def main(args: Array[String]) {
     //将结果保存至数据库
-    val conn=ConnectionPool.getConnection()
+    val conn=ConnectionPool.getConnection
     //清空表
     val pstd=conn.prepareStatement("truncate table evaluation")
     pstd.executeUpdate()
@@ -129,7 +129,7 @@ object trainEvaluation {
     val endTime = new DateTime()
     val Rmse = computeRMSE(model, validationData)
     val duration = new Duration(startTime, endTime)
-    println(f"训练参数：rank:$rank%3d,iterations:$iterations%.2f ,lambda = $lambda%.2f 结果 Rmse=$Rmse%.2f" + "训练需要时间" + duration.getMillis + "毫秒")
+    println(f"训练参数：rank=$rank%3d,iterations=$iterations%.2f,lambda=$lambda%.2f 结果:Rmse=$Rmse%.2f" + " 训练需要时间:" + duration.getMillis + "毫秒")
     (Rmse, duration.getMillis())
   }
 

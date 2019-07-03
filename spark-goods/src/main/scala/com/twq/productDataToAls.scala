@@ -16,7 +16,7 @@ object productDataToAls {
   def productData: (SparkContext,RDD[Rating]) = {
     val driver="com.mysql.jdbc.Driver"
     //url指向要访问的数据库名spark
-    val url="jdbc:mysql://127.0.0.1:3306/spark"
+    val url="jdbc:mysql://127.0.0.1:3306/spark?characterEncoding=utf8&useSSL=true"
     val user="root"
     val password="root"
     val table="(select userID,itemID,scores from raw) as alsData"
