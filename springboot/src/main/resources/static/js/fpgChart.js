@@ -182,7 +182,7 @@ var fpgChart = {
                     }
                 ]
             };
-            var image = echarts.init(document.getElementById("fpgChart1"), 'macarons');
+            var image = echarts.init(document.getElementById("fpgChart1"), 'light');
             image.setOption(option)
         },
         drawEvalChart2: function (data) {
@@ -267,19 +267,9 @@ var fpgChart = {
                         focusNodeAdjacency: true,
                         roam: true,
                         categories: [{
-                            name: '前项',
-                            // itemStyle: {
-                            //     normal: {
-                            //         color: "#009800"
-                            //     }
-                            // }
+                            name: '前项'
                         }, {
-                            name: '后项',
-                            // itemStyle: {
-                            //     normal: {
-                            //         color: "#ff411c"
-                            //     }
-                            // }
+                            name: '后项'
                         }],
                         label: {
                             normal: {
@@ -315,7 +305,7 @@ var fpgChart = {
                     }
                 ]
             };
-            var image = echarts.init(document.getElementById("fpgChart2"), 'macarons');
+            var image = echarts.init(document.getElementById("fpgChart2"), 'light');
             image.setOption(option)
         },
         ajax: function (url, parameters, successCallBackFun) {

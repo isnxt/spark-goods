@@ -59,7 +59,7 @@ var followChart = {
             };
 
             //alert(document.getElementById("followChart1"));
-            var image = echarts.init(document.getElementById("followChart1"),'macarons');
+            var image = echarts.init(document.getElementById("followChart1"),'light');
             image.setOption(option)
         },
 

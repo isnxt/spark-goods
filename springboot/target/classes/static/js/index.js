@@ -1,5 +1,5 @@
 function showIndexChart(){
-    var image = echarts.init(document.getElementById("indexChart"),'macarons');
+    var image = echarts.init(document.getElementById("indexChart"),'light');
     var data = [{
         fixed: true,
         x: image.getWidth() / 2,

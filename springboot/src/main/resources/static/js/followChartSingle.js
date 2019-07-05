@@ -42,7 +42,7 @@ var followChartSingle = {
                     type: 'line'
                 }]
             };
-            var image = echarts.init(document.getElementById("singleValueChart1"),'macarons');
+            var image = echarts.init(document.getElementById("singleValueChart1"),'light');
             image.setOption(option)
         },
         drawChart2:function(data){
@@ -93,7 +93,7 @@ var followChartSingle = {
                 ]
             };
 
-            var image = echarts.init(document.getElementById("singleValueChart2"),'macarons');
+            var image = echarts.init(document.getElementById("singleValueChart2"),'light');
             image.setOption(option)
         },
 

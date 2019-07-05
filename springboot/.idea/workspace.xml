@@ -30,38 +30,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fpgChart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="159" column="40" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
+            <state relative-caret-position="132">
+              <caret line="271" column="38" selection-start-line="271" selection-start-column="38" selection-end-line="271" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/macarons.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/fontawesome-free/js/all.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-160">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/evalChart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="388" column="39" lean-forward="true" selection-start-line="388" selection-start-column="39" selection-end-line="388" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fpgTable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+            <state relative-caret-position="172">
+              <caret line="2843" lean-forward="true" selection-start-line="2843" selection-end-line="2843" />
             </state>
           </provider>
         </entry>
@@ -99,15 +81,15 @@
       <find>ui/</find>
       <find>&lt;span&gt;Copyright &amp;copy; Your Website 2019&lt;/span&gt;</find>
       <find>&lt;script src=&quot;../static/vendor/echarts/js/echarts.min.js&quot; th:src=&quot;@{vendor/echarts.min.js}&quot;&gt;&lt;/script&gt;</find>
-      <find>,true)</find>
       <find>springboot1</find>
-      <find>true)</find>
-      <find>'macarons'</find>
       <find>vendor//</find>
       <find>essos</find>
-      <find>macarons</find>
       <find>'light'</find>
       <find>(iter</find>
+      <find>'macarons'</find>
+      <find>,true)</find>
+      <find>macarons</find>
+      <find>true)</find>
     </findStrings>
     <replaceStrings>
       <replace>-table</replace>
@@ -119,13 +101,10 @@
       <replace>&lt;hr/&gt;</replace>
       <replace>Chart&quot;</replace>
       <replace>&lt;a class=&quot;nav-link&quot; th:href=&quot;@{/}&quot; href=&quot;index.html&quot;&gt;</replace>
-      <replace />
       <replace>&lt;span&gt;Copyright &amp;copy; Spark Goods 2019&lt;/span&gt;</replace>
       <replace>,'macarons')</replace>
-      <replace>true</replace>
       <replace>'macarons')</replace>
       <replace>'essos'</replace>
-      <replace>essos</replace>
       <replace>vendor/</replace>
       <replace>light</replace>
       <replace>w</replace>
@@ -134,13 +113,18 @@
       <replace>1 )</replace>
       <replace>10 )</replace>
       <replace>( iter</replace>
+      <replace>,'essos')</replace>
+      <replace>essos</replace>
+      <replace />
+      <replace>true</replace>
+      <replace>'light')</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\Project\spark-goods\springboot1\src\main\resources\templates</dir>
       <dir>D:\Project\spark-goods\springboot1\src\main\resources\static\js</dir>
       <dir>D:\Project\spark-goods\springboot\src\main\resources</dir>
-      <dir>D:\Project\spark-goods\springboot\src\main\resources\templates</dir>
       <dir>D:\Project\spark-goods\springboot\src\main\resources\static\vendor\echarts\js</dir>
+      <dir>D:\Project\spark-goods\springboot\src\main\resources\templates</dir>
       <dir>D:\Project\spark-goods\springboot\src\main\resources\static\js</dir>
     </dirStrings>
   </component>
@@ -184,9 +168,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/followTable.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/followTable.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/windowFollow.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/followChartWindow.js" />
         <option value="$PROJECT_DIR$/src/main/java/bigdata/domain/Eval.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/followChartSingle.html" />
         <option value="$PROJECT_DIR$/src/main/java/bigdata/dao/SingleFollowDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/bigdata/dao/AllFollowDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/bigdata/dao/FollowDao.java" />
@@ -194,15 +176,17 @@
         <option value="$PROJECT_DIR$/src/main/java/bigdata/dao/RawDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/bigdata/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/bigdata/dao/WindowFollowDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/evalChart.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/followChart.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/followChart.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/evalChart.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/fpgChart.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/macarons.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/evalChart.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/followChartSingle.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/fpgChart.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/followChart.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/followChartWindow.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/followChart.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/fpgChart.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/fpgChart.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/evalChart.js" />
       </list>
     </option>
   </component>
@@ -226,6 +210,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,96 +218,10 @@
               <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
               <item name="springboot" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bigdata" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bigdata" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -364,21 +263,22 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Project\spark-goods\springboot1\src\main\resources\static\vendor\echarts\js" />
-      <recent name="D:\Project\spark-goods\springboot1\src\main\resources\templates" />
-      <recent name="D:\Project\spark-goods\springboot1" />
-      <recent name="H:\spark\springboot1\src\main\resources\static\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Project\spark-goods\springboot\src\main\resources\static\vendor\echarts\js" />
       <recent name="D:\Project\spark-goods\springboot1\src\main\resources\templates" />
       <recent name="D:\Project\spark-goods\springboot1\src\main\resources\static\js" />
       <recent name="H:\spark\springboot1\src\main\resources\templates" />
       <recent name="H:\spark\springboot1\src\main\resources\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\spark-goods\springboot1\src\main\resources\static\vendor\echarts\js" />
+      <recent name="D:\Project\spark-goods\springboot1\src\main\resources\templates" />
+      <recent name="D:\Project\spark-goods\springboot1" />
+      <recent name="H:\spark\springboot1\src\main\resources\static\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -489,11 +389,14 @@
       <workItem from="1562055389931" duration="165000" />
       <workItem from="1562056365696" duration="1486000" />
       <workItem from="1562072001806" duration="6771000" />
+      <workItem from="1562129131309" duration="3411000" />
+      <workItem from="1562132684223" duration="1451000" />
+      <workItem from="1562134175077" duration="896000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126057000" />
+    <option name="totallyTimeSpent" value="131815000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -506,9 +409,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49403974" visible="true" weight="0.22146636" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49403974" visible="true" weight="0.2191988" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -518,7 +420,7 @@
       <window_info id="Designer" order="7" />
       <window_info id="Web" order="8" show_stripe_button="false" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4988662" weight="0.4092715" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49811035" weight="0.4092715" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -587,38 +489,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/bigdata/domain/RawData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bigdata/domain/Eval.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/undraw_posting_photo.svg" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/bigdata/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#232#233#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ui/activity.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ui/task.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ui/ui-button-icon.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ui/other-user-listing.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ui/other-user-profile.html" />
@@ -717,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bigdata/dao/WindowFollowDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bigdata/domain/WindowFollow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -741,80 +604,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bigdata/controller/WsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="79" column="27" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/followChartSingle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" selection-start-line="20" selection-end-line="98" />
-          <folding>
-            <element signature="n#!!block;n#drawChart1#0;n#drawChart1#0;n#!!block;n#fn#0;n#!!block;n#followChartSingle#0;n#!!top" />
-            <element signature="n#!!block;n#drawChart2#0;n#drawChart2#0;n#!!block;n#fn#0;n#!!block;n#followChartSingle#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/followChartWindow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/sb-admin-2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/shine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/infographic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/wonderland.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="63" column="18" lean-forward="true" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/followTable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="334" column="14" selection-start-line="334" selection-start-column="14" selection-end-line="334" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/followChart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="269" column="38" lean-forward="true" selection-start-line="269" selection-start-column="38" selection-end-line="269" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/evalChart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="263" column="62" lean-forward="true" selection-start-line="263" selection-start-column="62" selection-end-line="263" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -835,64 +628,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/evalTable.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/followChartSingle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="264" column="90" selection-start-line="264" selection-start-column="90" selection-end-line="264" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/itemRTable.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fpgChart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="363" lean-forward="true" selection-start-line="363" selection-end-line="363" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/followChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/essos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/macarons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/evalChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="388" column="39" lean-forward="true" selection-start-line="388" selection-start-column="39" selection-end-line="388" selection-end-column="39" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fpgTable.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -901,10 +638,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fpgChart.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/wonderland.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/infographic.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/shine.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/macarons.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/essos.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/evalTable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3888" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fpgChart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="349" column="48" lean-forward="true" selection-start-line="349" selection-start-column="48" selection-end-line="349" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/evalTable.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/followTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bigdata/dao/WindowFollowDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bigdata/controller/WsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="79" column="55" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/followChartWindow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="159" column="40" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
+          <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/echarts/js/warm.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/followChartSingle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="114" column="25" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!block;n#drawChart1#0;n#drawChart1#0;n#!!block;n#fn#0;n#!!block;n#followChartSingle#0;n#!!top" />
+            <element signature="n#!!block;n#drawChart2#0;n#drawChart2#0;n#!!block;n#fn#0;n#!!block;n#followChartSingle#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/followChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/followTable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="334" column="14" selection-start-line="334" selection-start-column="14" selection-end-line="334" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/followChartSingle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="351" selection-start-line="351" selection-end-line="351" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/followChart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="357" column="38" selection-start-line="357" selection-start-column="38" selection-end-line="357" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/itemRTable.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/test.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/evalChart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6704">
+          <caret line="419" selection-start-line="419" selection-end-line="419" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/evalChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2416">
+          <caret line="184" column="21" lean-forward="true" selection-start-line="184" selection-start-column="21" selection-end-line="184" selection-end-column="21" />
+          <folding>
+            <element signature="e#1629#3725#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fpgChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="271" column="38" selection-start-line="271" selection-start-column="38" selection-end-line="271" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/fontawesome-free/js/all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="2843" lean-forward="true" selection-start-line="2843" selection-end-line="2843" />
         </state>
       </provider>
     </entry>

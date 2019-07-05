@@ -18,7 +18,7 @@ public class JDBCUtils {
             InputStream in = JDBCUtils.class.getClassLoader().getResourceAsStream("jdbc.properties");
             prop.load(in);
             BasicDataSourceFactory factory = new BasicDataSourceFactory();
-            dataSource = factory.createDataSource(prop);
+            dataSource = BasicDataSourceFactory.createDataSource(prop);
         }catch (Exception e) {
             e.printStackTrace();
         }

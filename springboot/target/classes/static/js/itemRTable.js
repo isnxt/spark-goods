@@ -26,7 +26,7 @@ var itemRTable = {
                     //错误的回调函数
                     alert(data);
                 }
-            })
+            });
             return result;
         },
         returnData:function (data) {

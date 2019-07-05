@@ -59,7 +59,7 @@ var followChartWindow = {
 
 
             //alert(document.getElementById("followChart1"));
-            var image = echarts.init(document.getElementById("followChart2"),'macarons');
+            var image = echarts.init(document.getElementById("followChart2"),'light');
             image.setOption(option)
         },
         ajax:function(url,parameters,successCallBackFun){

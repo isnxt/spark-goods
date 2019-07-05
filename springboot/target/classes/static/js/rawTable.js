@@ -46,7 +46,7 @@ var rawTable = {
                     //错误的回调函数
                     alert(data);
                 }
-            })
+            });
             return result;
         },
         showTable:function (data) {
@@ -90,4 +90,4 @@ var rawTable = {
             });
         }
     }
-}
+};
