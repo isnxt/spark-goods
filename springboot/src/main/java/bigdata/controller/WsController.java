@@ -18,11 +18,11 @@ public class WsController {
     @Autowired
     private FollowService followService;
     @Autowired
-    private RawDataService rawDataService;
+    private RawService rawService;
     @Autowired
-    private UserRService userRService;
+    private UserService userService;
     @Autowired
-    private ItemRService itemRService;
+    private ItemService itemService;
     @Autowired
     private EvalService evalService;
     @Autowired
@@ -42,21 +42,33 @@ public class WsController {
     @RequestMapping(value = "/getRawData")
     @ResponseBody
     public Map<String, Object> getRawData(){
-        List<RawData> result = rawDataService.getData();
+        List<RawData> result = rawService.getData();
         return ResultJson.resultSuccess(result);
     }
-
     @RequestMapping(value = "/getUserData")
     @ResponseBody
     public Map<String, Object> getUserData(){
-        List<UserR> result = userRService.getData();
+        List<User> result = userService.getData();
         return ResultJson.resultSuccess(result);
     }
 
     @RequestMapping(value = "/getItemData")
     @ResponseBody
     public Map<String, Object> getItemData(){
-        List<ItemR> result = itemRService.getData();
+        List<Item> result = itemService.getData();
+        return ResultJson.resultSuccess(result);
+    }
+    @RequestMapping(value = "/getUserRtData")
+    @ResponseBody
+    public Map<String, Object> getUserRtData(){
+        List<UserR> result = userService.getRtData();
+        return ResultJson.resultSuccess(result);
+    }
+
+    @RequestMapping(value = "/getItemRtData")
+    @ResponseBody
+    public Map<String, Object> getItemRtData(){
+        List<ItemR> result = itemService.getRtData();
         return ResultJson.resultSuccess(result);
     }
 

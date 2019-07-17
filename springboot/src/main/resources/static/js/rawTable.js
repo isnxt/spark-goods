@@ -3,25 +3,6 @@ var rawTable = {
         getData:"/getRawData"
     },
     fn:{
-        test:function () {
-            var id=document.getElementById("rawTable");
-            //alert(typeof id);
-            var text="";
-            for(var i=0;i<4;i++){
-                var str="<tr>" +
-                    "<td>"+1+"</td>" +
-                    "<td>"+2+"</td>" +
-                    "<td>"+3+"</td>" +
-                    "<td>"+4+"</td>"+
-                    "<td>"+5+"</td>"+
-                    "<td>"+6+"</td>"+
-                    "<td>"+7+"</td>"+
-                    "</tr>";
-                text+=str;
-                //alert(str);
-            }
-            id.innerHTML=text;
-        },
         renderMain:function(){
             //ajax的回调函数
             var result="";

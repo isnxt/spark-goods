@@ -1,6 +1,6 @@
 var userRTable = {
     url:{
-        getData:"/getUserData"
+        getData:"/getUserRtData"
     },
     fn:{
         showUserRDataTable:function () {

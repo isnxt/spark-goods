@@ -1,6 +1,6 @@
 var itemRTable = {
     url:{
-        getData:"/getItemData"
+        getData:"/getItemRtData"
     },
     fn:{
         showItemRDataTable:function () {

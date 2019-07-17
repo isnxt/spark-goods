@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
-    <title>SB Admin 2 - Cards</title>
+    <title>Spark Goods</title>
     
     <!-- Custom fonts for this template-->
     <link type="text/css" href="../static/vendor/fontawesome-free/css/all.min.css"
@@ -52,14 +52,25 @@
             
             <!-- Heading -->
             <div class="sidebar-heading">
-                Simulation
+                DATASETS
             </div>
             
             <!-- Nav Item - Tables -->
-            <li class="nav-item active">
-                <a class="nav-link" href="rawTable.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>数据集</span></a>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseData"
+                   aria-expanded="true"
+                   aria-controls="collapseData">
+                    <i class="fas fa-fw fa-heart"></i>
+                    <span>数据集</span>
+                </a>
+                <div id="collapseData" class="collapse show" aria-labelledby="headingData" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <!--                    <h6 class="collapse-header">Custom Components:</h6>-->
+                        <a class="collapse-item" href="userTable.html">用户表</a>
+                        <a class="collapse-item" href="itemTable.html">商品表</a>
+                        <a class="collapse-item active" href="rawTable.html">行为表</a>
+                    </div>
+                </div>
             </li>
             
             <!-- Divider -->
@@ -211,36 +222,9 @@
                         
                         
                         <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">小明同学</span>
-                                <div class="box-icon img-profile rounded-circle">
-                                    <i class="fa fa-user-circle fa-2x text-primary"></i>
-                                    <img src=""  alt=""/>
-                                </div>
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
+                        <li class="nav-item">
+                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                    class="fa fa-link fa-sm text-white-50"></i> 获取源代码</a>
                         </li>
                     
                     </ul>
@@ -253,7 +237,7 @@
                     
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">DataSet</h1>
+                        <h1 class="h3 mb-0 text-gray-800">行为数据</h1>
                     </div>
                     
                     <!-- DataTales Example -->

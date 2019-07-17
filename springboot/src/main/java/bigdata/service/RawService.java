@@ -11,8 +11,8 @@ import java.util.*;
 
 
 @Service
-public class RawDataService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(RawDataService.class);
+public class RawService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(RawService.class);
 
     @Autowired
     private RawDao rawDao;

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class TemplatesController {
+public class UrlController {
     @RequestMapping("/")
     public String handle(){
         return "/index";
@@ -30,6 +30,15 @@ public class TemplatesController {
         return "followChartSingle";
     }
 
+    @RequestMapping("/userTable")
+    public String handleUserTable(ModelMap modelMap) {
+        return "userTable";
+    }
+
+    @RequestMapping("/itemTable")
+    public String handleItemTable(ModelMap modelMap) {
+        return "itemTable";
+    }
 
     @RequestMapping("/rawTable")
     public String handleRawTable(ModelMap modelMap) {

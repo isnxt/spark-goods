@@ -7380,8 +7380,8 @@ function findExistImage(newImageOrSrc) {
 }
 
 /**
- * Caution: User should cache loaded images, but not just count on LRU.
- * Consider if required images more than LRU size, will dead loop occur?
+ * Caution: User should cache loaded img, but not just count on LRU.
+ * Consider if required img more than LRU size, will dead loop occur?
  *
  * @param {string|HTMLImageElement|HTMLCanvasElement|Canvas} newImageOrSrc
  * @param {HTMLImageElement|HTMLCanvasElement|Canvas} image Existent image.
