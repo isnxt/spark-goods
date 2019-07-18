@@ -251,12 +251,12 @@ var fpgChart = {
                         show: true,
                         textStyle: {
                             fontSize: 12
-                        },
+                        }
                     }
                 },
                 legend: {
                     x: "center",
-                    show: false,
+                    show: false
                 },
                 series: [
 

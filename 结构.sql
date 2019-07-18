@@ -10,15 +10,83 @@ Target Server Type    : MYSQL
 Target Server Version : 50726
 File Encoding         : 65001
 
-Date: 2019-07-03 09:18:06
+Date: 2019-07-18 11:36:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+DROP TABLE IF EXISTS `evaluation`;
+DROP TABLE IF EXISTS `fpg`;
+DROP TABLE IF EXISTS `recuser`;
+DROP TABLE IF EXISTS `recitem`;
+DROP TABLE IF EXISTS `follow`;
+DROP TABLE IF EXISTS `followwindow`;
+DROP TABLE IF EXISTS `followsingle`;
+DROP TABLE IF EXISTS `raw`;
+DROP TABLE IF EXISTS `raw2`;
+DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS `item`;
+
+-- ----------------------------
+-- Table structure for user
+-- ----------------------------
+CREATE TABLE `user` (
+  `userID` int(11) NOT NULL,
+  `userName` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for item
+-- ----------------------------
+CREATE TABLE `item` (
+  `itemID` int(11) NOT NULL,
+  `itemName` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`itemID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for raw
+-- ----------------------------
+CREATE TABLE `raw` (
+  `rawID` int(11) NOT NULL AUTO_INCREMENT,
+  `userID` int(11) NOT NULL,
+  `itemID` int(11) NOT NULL,
+  `browser_num` int(11) NOT NULL,
+  `stay_time` float DEFAULT NULL,
+  `collect` int(11) NOT NULL,
+  `buy_num` int(11) NOT NULL,
+  `scores` double DEFAULT NULL,
+  PRIMARY KEY (`rawID`),
+  KEY `rawdata_ibfk_1` (`rawID`) USING BTREE,
+  KEY `raw_fk_1` (`userID`),
+  KEY `raw_fk_2` (`itemID`),
+  CONSTRAINT `raw_fk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`),
+  CONSTRAINT `raw_fk_2` FOREIGN KEY (`itemID`) REFERENCES `item` (`itemID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1317 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for raw2
+-- ----------------------------
+CREATE TABLE `raw2` (
+  `rawID` int(11) NOT NULL AUTO_INCREMENT,
+  `userID` int(11) NOT NULL,
+  `itemID` int(11) NOT NULL,
+  `browser_num` int(11) NOT NULL,
+  `stay_time` float DEFAULT NULL,
+  `collect` int(11) NOT NULL,
+  `buy_num` int(11) NOT NULL,
+  `scores` double DEFAULT NULL,
+  PRIMARY KEY (`rawID`),
+  KEY `rawdata_ibfk_1` (`rawID`) USING BTREE,
+  KEY `raw_fk_1` (`userID`),
+  KEY `raw_fk_2` (`itemID`),
+  CONSTRAINT `raw2_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`),
+  CONSTRAINT `raw2_ibfk_2` FOREIGN KEY (`itemID`) REFERENCES `item` (`itemID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1317 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for evaluation
 -- ----------------------------
-DROP TABLE IF EXISTS `evaluation`;
 CREATE TABLE `evaluation` (
   `rank` int(11) NOT NULL,
   `iterations` int(11) NOT NULL,
@@ -30,7 +98,6 @@ CREATE TABLE `evaluation` (
 -- ----------------------------
 -- Table structure for follow
 -- ----------------------------
-DROP TABLE IF EXISTS `follow`;
 CREATE TABLE `follow` (
   `itemID` int(11) NOT NULL,
   `followValue` double(11,6) DEFAULT NULL,
@@ -41,7 +108,6 @@ CREATE TABLE `follow` (
 -- ----------------------------
 -- Table structure for followsingle
 -- ----------------------------
-DROP TABLE IF EXISTS `followsingle`;
 CREATE TABLE `followsingle` (
   `windowFollowValue` double(11,6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -49,7 +115,6 @@ CREATE TABLE `followsingle` (
 -- ----------------------------
 -- Table structure for followwindow
 -- ----------------------------
-DROP TABLE IF EXISTS `followwindow`;
 CREATE TABLE `followwindow` (
   `itemID` int(11) NOT NULL,
   `followValue` double(11,6) DEFAULT NULL,
@@ -60,63 +125,16 @@ CREATE TABLE `followwindow` (
 -- ----------------------------
 -- Table structure for fpg
 -- ----------------------------
-DROP TABLE IF EXISTS `fpg`;
 CREATE TABLE `fpg` (
   `antecedent` varchar(255) NOT NULL,
   `consequent` varchar(255) NOT NULL,
   `confidence` double(255,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Table structure for item
--- ----------------------------
-DROP TABLE IF EXISTS `item`;
-CREATE TABLE `item` (
-  `itemID` int(11) NOT NULL,
-  `itemName` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`itemID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Table structure for raw
--- ----------------------------
-DROP TABLE IF EXISTS `raw`;
-CREATE TABLE `raw` (
-  `userID` int(11) NOT NULL,
-  `itemID` int(11) NOT NULL,
-  `browser_num` int(11) NOT NULL,
-  `stay_time` float DEFAULT NULL,
-  `collect` int(11) NOT NULL,
-  `buy_num` int(11) NOT NULL,
-  `scores` double DEFAULT NULL,
-  PRIMARY KEY (`userID`,`itemID`),
-  KEY `rawdata_ibfk_2` (`itemID`),
-  CONSTRAINT `raw_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`),
-  CONSTRAINT `raw_ibfk_2` FOREIGN KEY (`itemID`) REFERENCES `item` (`itemID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Table structure for raw2
--- ----------------------------
-DROP TABLE IF EXISTS `raw2`;
-CREATE TABLE `raw2` (
-  `userID` int(11) NOT NULL,
-  `itemID` int(11) NOT NULL,
-  `browser_num` int(11) NOT NULL,
-  `stay_time` float DEFAULT NULL,
-  `collect` int(11) NOT NULL,
-  `buy_num` int(11) NOT NULL,
-  `scores` double DEFAULT NULL,
-  PRIMARY KEY (`userID`,`itemID`),
-  KEY `rawdata_ibfk_2` (`itemID`),
-  CONSTRAINT `raw2_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`),
-  CONSTRAINT `raw2_ibfk_2` FOREIGN KEY (`itemID`) REFERENCES `item` (`itemID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for recitem
 -- ----------------------------
-DROP TABLE IF EXISTS `recitem`;
 CREATE TABLE `recitem` (
   `itemID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
@@ -130,7 +148,6 @@ CREATE TABLE `recitem` (
 -- ----------------------------
 -- Table structure for recuser
 -- ----------------------------
-DROP TABLE IF EXISTS `recuser`;
 CREATE TABLE `recuser` (
   `userID` int(11) NOT NULL,
   `itemID` int(11) NOT NULL,
@@ -152,12 +169,4 @@ CREATE TABLE `test` (
   CONSTRAINT `test_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Table structure for user
--- ----------------------------
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user` (
-  `userID` int(11) NOT NULL,
-  `userName` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`userID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

@@ -80,9 +80,9 @@ var evalChart = {
                     {
                         type: 'value',
                         name: '均方误差',
-                        min: 2,
-                        max: 2.8,
-                        interval: 0.2,
+                        min: 2.2,
+                        max: 2.7,
+                        interval: 0.1,
                         axisLabel: {
                             formatter: '{value}'
                         }
@@ -90,9 +90,9 @@ var evalChart = {
                     {
                         type: 'value',
                         name: 'rmse',
-                        min: 2,
-                        max: 2.8,
-                        interval: 0.2,
+                        min: 2.2,
+                        max: 2.7,
+                        interval: 0.1,
                         axisLabel: {
                             formatter: '{value}'
                         }
@@ -154,8 +154,8 @@ var evalChart = {
                         type: 'value',
                         name: '训练时间',
                         min: 0,
-                        max: 30,
-                        interval: 5,
+                        max: 6,
+                        interval: 1,
                         axisLabel: {
                             formatter: '{value}'
                         }
@@ -164,8 +164,8 @@ var evalChart = {
                         type: 'value',
                         name: 'time',
                         min: 0,
-                        max: 30,
-                        interval: 5,
+                        max: 6,
+                        interval: 1,
                         axisLabel: {
                             formatter: '{value}'
                         }
@@ -246,9 +246,9 @@ var evalChart = {
                     {
                         type: 'value',
                         name: '均方误差',
-                        min: 2,
-                        max: 2.8,
-                        interval: 0.2,
+                        min: 2.2,
+                        max: 2.7,
+                        interval: 0.1,
                         axisLabel: {
                             formatter: '{value}'
                         }
@@ -256,9 +256,9 @@ var evalChart = {
                     {
                         type: 'value',
                         name: 'rmse',
-                        min: 2,
-                        max: 2.8,
-                        interval: 0.2,
+                        min: 2.2,
+                        max: 2.7,
+                        interval: 0.1,
                         axisLabel: {
                             formatter: '{value}'
                         }
@@ -317,8 +317,8 @@ var evalChart = {
                         type: 'value',
                         name: '训练时间',
                         min: 0,
-                        max: 10,
-                        interval: 2,
+                        max: 6,
+                        interval: 1,
                         axisLabel: {
                             formatter: '{value}'
                         }
@@ -327,8 +327,8 @@ var evalChart = {
                         type: 'value',
                         name: 'time',
                         min: 0,
-                        max: 10,
-                        interval: 2,
+                        max: 6,
+                        interval: 1,
                         axisLabel: {
                             formatter: '{value}'
                         }
@@ -411,9 +411,9 @@ var evalChart = {
                     {
                         type: 'value',
                         name: '均方误差',
-                        min: 2,
-                        max: 2.8,
-                        interval: 0.2,
+                        min: 2.2,
+                        max: 2.7,
+                        interval: 0.1,
                         axisLabel: {
                             formatter: '{value}'
                         }
@@ -421,9 +421,9 @@ var evalChart = {
                     {
                         type: 'value',
                         name: 'rmse',
-                        min: 2,
-                        max: 2.8,
-                        interval: 0.2,
+                        min: 2.2,
+                        max: 2.7,
+                        interval: 0.1,
                         axisLabel: {
                             formatter: '{value}'
                         }
@@ -485,8 +485,8 @@ var evalChart = {
                         type: 'value',
                         name: '训练时间',
                         min: 0,
-                        max: 30,
-                        interval: 5,
+                        max: 6,
+                        interval: 1,
                         axisLabel: {
                             formatter: '{value}'
                         }
@@ -495,8 +495,8 @@ var evalChart = {
                         type: 'value',
                         name: 'time',
                         min: 0,
-                        max: 30,
-                        interval: 5,
+                        max: 6,
+                        interval: 1,
                         axisLabel: {
                             formatter: ''
                         }

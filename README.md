@@ -18,3 +18,10 @@ frontend
 - spark-goods: 分析
 - springboot1: 网页
 
+## step
+1. run Server.java + Client.java
+2. run trainEvaluation.scala
+3. run trainAIS.scala
+4. run fpg.scala
+5. run springboot project 
+6. open http://localhost:8080/ in Web Browser
