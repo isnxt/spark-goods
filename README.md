@@ -17,13 +17,19 @@ website (springboot1)
 - springboot
 - mysql
 
-## step
-1. run Server.java + Client.java
-2. run trainEvaluation.scala
-3. run trainAIS.scala
-4. run fpg.scala
-5. run springboot project 
-6. open http://localhost:8080/ in Web Browser
+## quick start
+- run create.sql + data.sql
+- run spriingboot
+- open http://localhost:8080/ in Web Browser
+
+## how to gernerate data
+1. install mysql and create db spark
+2. run create.sql
+2. run Server.java + Client.java
+3. run trainEvaluation.scala
+4. run trainAIS.scala
+5. run fpg.scala
+
 
 ## screenshot
 1. index
