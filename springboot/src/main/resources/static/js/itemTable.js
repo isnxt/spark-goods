@@ -20,7 +20,7 @@ var itemTable = {
                 success: function (data) {
                     //成功的回调函数
                     //alert("success");
-                    result=rawTable.fn.showTable(data);
+                    result=itemTable.fn.showTable(data);
                     //alert(result);
                 },
                 error: function (XMLHttpRequest,data) {

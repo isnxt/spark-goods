@@ -20,7 +20,7 @@ var userTable = {
                 success: function (data) {
                     //成功的回调函数
                     //alert("success");
-                    result=rawTable.fn.showTable(data);
+                    result=userTable.fn.showTable(data);
                     //alert(result);
                 },
                 error: function (XMLHttpRequest,data) {
@@ -37,6 +37,7 @@ var userTable = {
             for(var i=0;i<datas.length;i++){
                 var str="<tr>" +
                     "<td>"+datas[i].userID+"</td>" +
+                    "<td>"+datas[i].userName+"</td>" +
                     "</tr>";
                 text+=str;
             }
