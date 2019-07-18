@@ -5,12 +5,12 @@ spark流式计算
 - 关联系统
 
 ## core
-anaylse (spark-goods)    
+anaylse (spark)    
 - spark:2.6.5
 - hadoop:2.6.0
 - scala:2.11.8
 
-website (springboot1)    
+website (webapp)    
 - boostrap
 - startbootstrap
 - echarts
