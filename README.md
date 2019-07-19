@@ -33,20 +33,20 @@ website (webapp)
 
 ## screenshot
 1. index
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/1.png)
+![screenshot](screenshot/1.png)
 2. data
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/2.png)
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/3.png)
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/4.png)
+![screenshot](screenshot/2.png)
+![screenshot](screenshot/3.png)
+![screenshot](screenshot/4.png)
 3. follow
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/5.png)
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/6.png)
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/7.png)
+![screenshot](screenshot/5.png)
+![screenshot](screenshot/6.png)
+![screenshot](screenshot/7.png)
 4. evaluate
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/8.png)
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/9.png)
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/10.png)
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/11.png)
+![screenshot](screenshot/8.png)
+![screenshot](screenshot/9.png)
+![screenshot](screenshot/10.png)
+![screenshot](screenshot/11.png)
 5. fpg
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/12.png)
-![screenshot](https://raw.githubusercontent.com/isnxt/spark-goods/master/screenshot/13.png)
+![screenshot](screenshot/12.png)
+![screenshot](screenshot/13.png)
