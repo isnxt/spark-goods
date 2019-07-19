@@ -24,7 +24,7 @@ public class Server {
 
 class UserItemSimulator {
     private static int GOOD_NUM = 100;    //商品数
-    private static int USER_NUM = 500;    //用户数
+    private static int USER_NUM = 1000;    //用户数
 
     public static void run() {
         Random r = new Random();
@@ -71,11 +71,11 @@ class UserItemSimulator {
 }
 
 class RawSimulator implements Runnable {
-    private int TIME_NUM = 100;    //循环数
+    private int TIME_NUM = 2000;    //循环数
     private int GOOD_NUM = 50;    //商品数
-    private int USER_NUM = 200;    //用户数
-    private int MSG_NUM = 2;     //每次产生的消息数(0-3)
-    private int LIST_NUM = 3;    //一个篮子内最多商品数
+    private int USER_NUM = 900;    //用户数
+    private int MSG_NUM = 4;     //每次产生的消息数(0-4)
+    private int LIST_NUM = 7;    //一个篮子内最多商品数
     private int LISTS_NUM = 8;    //有几种篮子
     private int BROWSE_NUM = 5;   //浏览次数
     private int STAY_TIME = 10;    //停留时间(分钟)
@@ -90,7 +90,7 @@ class RawSimulator implements Runnable {
         //2.创建list对象
         for (int i = 0; i < LISTS_NUM; i++) {
             //生成规则商品集
-            int itemNum = (r.nextInt(LIST_NUM) + 5);
+            int itemNum = (r.nextInt(LIST_NUM - 5) + 5);
             List<Integer> list = new ArrayList<Integer>();
             while (list.size() != itemNum) {
                 int num = r.nextInt(GOOD_NUM - 1) + 1;
@@ -124,12 +124,12 @@ class RawSimulator implements Runnable {
                     int msgNum = r.nextInt(MSG_NUM);
                     int userID = (r.nextInt(USER_NUM) + 1);
                     //检查是否存在
-                    ResultSet rs = stmt.executeQuery("SELECT * FROM raw WHERE userID=" + userID);
-                    rs.last();
-                    int rows = rs.getRow();
-                    if (rows != 0) {
-                        continue;
-                    }
+//                    ResultSet rs = stmt.executeQuery("SELECT * FROM raw WHERE userID=" + userID);
+//                    rs.last();
+//                    int rows = rs.getRow();
+//                    if (rows != 0) {
+//                        continue;
+//                    }
                     List<Integer> list = lists.get(r.nextInt(LISTS_NUM));
                     //start listen
                     System.out.println("等待客户端...");

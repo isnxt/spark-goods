@@ -14,7 +14,7 @@ import java.util.List;
 public class ItemDao {
     public List<Item> getDatas(){
         try{
-            String sql = "select itemID,itemName from item";
+            String sql = "select itemID,itemName from item limit 0,100";
             System.out.println("sql: "+sql);
             QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
             List<Item> beanList = runner.query(sql,new BeanListHandler<Item>(Item.class));
@@ -29,7 +29,7 @@ public class ItemDao {
     }
     public List<ItemR> getRtDatas(){
         try{
-            String sql = "select itemID,userID,scores from recitem";
+            String sql = "select itemID,userID,scores from recitem limit 0,100";
             System.out.println("sql: "+sql);
             QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
             List<ItemR> beanList = runner.query(sql,new BeanListHandler<ItemR>(ItemR.class));

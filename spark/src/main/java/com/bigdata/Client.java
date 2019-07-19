@@ -230,7 +230,5 @@ public class Client implements Serializable {
         jsc.awaitTermination();
         jsc.stop(true);
         jsc.close();
-
     }
-
 }

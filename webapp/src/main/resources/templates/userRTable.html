@@ -92,7 +92,7 @@
                 <div id="collapseHot" class="collapse" aria-labelledby="headingHot" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!--                    <h6 class="collapse-header">Custom Components:</h6>-->
-                        <a class="collapse-item" href="followTable.html">关注度查询</a>
+                        <a class="collapse-item" href="followTable.html">关注度结果</a>
                         <a class="collapse-item" href="followChart.html">关注度可视化</a>
                         <a class="collapse-item" href="followChartSingle.html">单个商品关注度可视化</a>
                     </div>
@@ -132,7 +132,7 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!--                    <h6 class="collapse-header">Custom Components:</h6>-->
-                        <a class="collapse-item" href="fpgTable.html">关联规则查询</a>
+                        <a class="collapse-item" href="fpgTable.html">关联规则结果</a>
                         <a class="collapse-item" href="fpgChart.html">关联规则可视化</a>
                     </div>
                 </div>
@@ -180,18 +180,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     
-                    <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                   aria-label="Search" aria-describedby="basic-addon2"/>
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+
                     
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -339,7 +328,7 @@
         $(document).ready(function() {
             var id= document.getElementById("userRTable");
             id.innerHTML=userRTable.fn.showUserRDataTable();
-            $('#dataTable').DataTable();
+            $('#dataTable').DataTable({"searching":false});
         } );
     </script>
 
