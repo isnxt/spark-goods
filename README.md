@@ -1,16 +1,16 @@
 # spark-goods
-spark流式计算    
+spark流式计算
 - 电商商品关注度
 - 推荐系统
 - 关联系统
 
 ## core
-anaylse (spark)    
+anaylse (spark)
 - spark:2.6.5
 - hadoop:2.6.0
 - scala:2.11.8
 
-website (webapp)    
+website (webapp)
 - boostrap
 - startbootstrap
 - echarts
@@ -33,20 +33,20 @@ website (webapp)
 
 ## screenshot
 1. index
-![screenshot](./screenshot/1.png)
+![screenshot](img/1.png)
 2. data
-![screenshot](./screenshot/2.png)
-![screenshot](./screenshot/3.png)
-![screenshot](./screenshot/4.png)
+![screenshot](img/2.png)
+![screenshot](img/3.png)
+![screenshot](img/4.png)
 3. follow
-![screenshot](./screenshot/5.png)
-![screenshot](./screenshot/6.png)
-![screenshot](./screenshot/7.png)
+![screenshot](img/5.png)
+![screenshot](img/6.png)
+![screenshot](img/7.png)
 4. evaluate
-![screenshot](./screenshot/8.png)
-![screenshot](./screenshot/9.png)
-![screenshot](./screenshot/10.png)
-![screenshot](./screenshot/11.png)
+![screenshot](img/8.png)
+![screenshot](img/9.png)
+![screenshot](img/10.png)
+![screenshot](img/11.png)
 5. fpg
-![screenshot](./screenshot/12.png)
-![screenshot](./screenshot/13.png)
+![screenshot](img/12.png)
+![screenshot](img/13.png)
